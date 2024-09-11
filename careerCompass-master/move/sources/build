@@ -1,0 +1,32 @@
+---
+name: CareerCompass
+account_address: "0xYourAccountAddress" # Replace with your actual account address
+module_name: StudyGroup
+
+dependencies:
+  - address: "0x1"
+    git: https://github.com/aptos-labs/aptos-core.git
+    subdir: aptos-framework/move-stdlib
+    rev: "main"
+
+compiler:
+  bytecode_version: "v1"
+  stdlib_version: "v1"
+
+profiles:
+  devnet:
+    network: "https://fullnode.devnet.aptoslabs.com/v1"
+    faucet: "https://faucet.devnet.aptoslabs.com"
+    account_address: "0xYourAccountAddress" # Replace with your actual account address
+
+  testnet:
+    network: "https://fullnode.testnet.aptoslabs.com/v1"
+    faucet: "https://faucet.testnet.aptoslabs.com"
+    account_address: "0xYourAccountAddress" # Replace with your actual account address
+
+  mainnet:
+    network: "https://fullnode.mainnet.aptoslabs.com/v1"
+    account_address: "0xYourAccountAddress" # Replace with your actual account address
+
+output: ./build
+

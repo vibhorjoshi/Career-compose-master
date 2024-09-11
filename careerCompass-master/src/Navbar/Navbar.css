@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: "Sevillana", cursive;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3c3b3b; /* Navbar background color */
+  color: white;
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0; /* Positions it at the top */
+  left: 0; /* Ensures it stretches across the full width */
+  width: 100%; /* Ensures the navbar spans the full width of the viewport */
+  z-index: 1000; /* Ensures the navbar is above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds a shadow to make the navbar stand out */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adds a subtle border at the bottom */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px; /* Adjust height as needed */
+  width: auto;
+  background-color: transparent; /* Ensure logo has no background color */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 11rem;
+  gap: 3rem;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px; /* Adjust space between text and underline */
+  transition: 0.5s;
+  font-size: 1.1rem;
+}
+.nav-links a:hover{
+  color: #fcb326;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fcb326;
+  transition: width 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Underline extends across the entire link */
+
+}

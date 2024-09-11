@@ -1,0 +1,40 @@
+.homepage-container {
+  display: flex;
+  height: 120vh;
+  margin-top: 3rem;
+  
+}
+
+.left-section,
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-section {
+  flex-direction: column;
+  text-align: center;
+}
+
+.website-name {
+  font-size: 7rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 5rem;
+  margin-left: 3rem;
+  font-family: "Nerko One", cursive;
+}
+
+.tagline {
+  font-size: 1.9rem;
+  color: #fcb326;
+  max-width: 80%;
+  margin-left: 7rem;
+}
+
+.avatar1 {
+  height: 25rem;
+  width: auto;
+}

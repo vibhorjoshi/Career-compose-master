@@ -1,0 +1,29 @@
+[package]
+name = "career_compass"
+version = "0.1.0"
+authors = ["Your Name"]
+license = "Apache-2.0"
+
+[addresses]
+CareerCompass = "_CareerCompassAddress"   # Replace with your module address
+AptosFramework = "0x1"
+
+[dependencies]
+aptos-framework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework", rev = "main" }
+
+[build]
+test = true
+
+[scripts]
+# Scripts to simplify running common commands
+test = "aptos move test"
+compile = "aptos move compile --package-dir ./move/sources"
+publish = "aptos move publish --package-dir ./move/sources --profile testnet"
+run = "aptos move run --function-id 0x<CareerCompass>::<Module>::<Function> --args <arg1> <arg2>"
+
+[profiles]
+devnet = { network = "devnet" }
+testnet = { network = "testnet" }
+mainnet = { network = "mainnet" }
+
+\]
